@@ -28,5 +28,12 @@ namespace VendedoresWebMVC.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult About()
+        {
+            ViewData["Mensagem"] = "Sales Web MVC";
+
+            return View();                       
+        }
     }
 }
